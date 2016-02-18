@@ -14,9 +14,11 @@ class FindandReplace
 
                 $position = array_search($find, $sentence);
                 $sentence[$position] = $replace;
+
             }
         }
-            return implode(" ", $sentence);
+            $sentence = implode(" ", $sentence);
+            return ucfirst($sentence);
   }
 
 }

@@ -9,7 +9,7 @@
         {
             //Arrange
             $test_FindandReplace = new FindandReplace;
-            $sentence = "How NOw BROWN coW. how is your brown sow?";
+            $sentence = "How NOw BROWN coW. how is your brownstone?";
             $find = "brown";
             $replace = "purple";
 
@@ -17,7 +17,7 @@
             $result = $test_FindandReplace->findReplace($sentence, $find, $replace);
 
             //Assert
-            $this->assertEquals("how now purple cow. how is your purple sow?", $result);
+            $this->assertEquals("how now purple cow. how is your brownstone?", $result);
         }
 
       }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    {% include '/includes/head.html.twig' %} <!--this will store all linked pages from header such as bootstrap and css, saved in includes folder (see aftondowney anagram github for example) -->
+    <body>
+        <div class="container">
+            <h1>Find and Replace</h1>
+            <p>
+                Enter a word to be replaced and the word to replace it. Then enter a sentence with the original word(s) and watch the magic happen!
+            </p>
+            <form action="/replace">
+              <div class="form-group">
+                  <label for="sentence">Enter a sentence using the original word(s)</label>
+                  <input type="text" id="sentence" name="sentence" class='form-control'><br>
+              </div>
+                <div class="form-group">
+                    <label for="find">Enter word to be replaced</label>
+                    <input type="text" id="find" name="find" class='form-control'><br>
+                </div>
+                <div class="form-group">
+                    <label for="replace">Enter the replacing word</label>
+                    <input type="text" id="replace" name="replace" class='form-control'><br>
+                </div>
+                <button class="btn btn-success" type="submit">Make Magic!</button>
+            </form><br><br>
+            <div class="well">
+                <p>
+                    <ul>
+                            <li>{{ results }}</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
