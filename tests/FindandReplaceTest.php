@@ -4,27 +4,12 @@
 
     class FindandReplaceTest extends PHPUnit_Framework_TestCase
     {
-        //
-        // function test_make_uniform_string()
-        // {
-        //     //Arrange
-        //     $test_FindandReplace = new FindandReplace;
-        //     $sentence = "How NOw BROWN coW.";
-        //     $find = "brown";
-        //     $replace = "purple";
-        //
-        //     //Act
-        //     $result = $test_FindandReplace->findReplace($sentence, $find, $replace);
-        //
-        //     //Assert
-        //     $this->assertEquals("how now brown cow.", $result);
-        // }
 
-        function test_replace_string()
-        { //this test will determine if the method sucessfully locates a user input word in the sentence.
+        function test_replace_one_word()
+        {
             //Arrange
             $test_FindandReplace = new FindandReplace;
-            $sentence = "How NOw BROWN coW. I love your brownstone house.";
+            $sentence = "How NOw BROWN coW. how is your brown sow?";
             $find = "brown";
             $replace = "purple";
 
@@ -32,9 +17,8 @@
             $result = $test_FindandReplace->findReplace($sentence, $find, $replace);
 
             //Assert
-            $this->assertEquals("how now purple cow. I love your brownstone house.", $result);
+            $this->assertEquals("how now purple cow. how is your purple sow?", $result);
         }
-
 
       }
 

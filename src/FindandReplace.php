@@ -7,14 +7,17 @@ class FindandReplace
         $sentence = strtolower($input_sentence);
         $find = strtolower($input_find);
         $replace = strtolower($input_replace);
+        $sentence = explode(" ", $sentence);
 
+        foreach ($sentence as $word){
+            if ($word == $find){
 
-        $new_sentence = str_replace($find, $replace, $sentence);
-
-        return $new_sentence;
-    }
-
-
+                $position = array_search($find, $sentence);
+                $sentence[$position] = $replace;
+            }
+        }
+            return implode(" ", $sentence);
+  }
 
 }
 
